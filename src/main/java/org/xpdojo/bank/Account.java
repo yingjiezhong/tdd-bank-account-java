@@ -4,7 +4,16 @@ public class Account {
 
     double balance;
 
+    public Account(double balance) {
+        this.balance = balance;
+    }
+
+    public Account() {
+
+    }
+
     public void deposit(double amount) {
         balance += amount;
     }
+
 }
