@@ -12,7 +12,7 @@ public class Account {
 
     }
 
-    public void deposit(double amount) {
+    public synchronized void deposit(double amount) {
         balance += amount;
     }
 
