@@ -51,4 +51,13 @@ public class AccountTest {
         assertThat(account.balance).isEqualTo(35.0);
     }
 
+    @Test
+    public void withdrawAmountToDecreaseTheBalance() {
+
+        Account account = new Account(35.0);
+
+        account.withdraw(15.0);
+        assertThat(account.balance).isEqualTo(20.0);
+
+    }
 }
