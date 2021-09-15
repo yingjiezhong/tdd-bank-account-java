@@ -64,6 +64,16 @@ public class AccountTest {
     }
 
     @Test
+    public void withdrawAmountNotMoreThanBalance() {
+
+        Account account = new Account(35.0);
+
+        account.withdraw(45.0);
+        assertThat(account.balance).isEqualTo(35.0);
+
+    }
+
+    @Test
     public void depositMultipleAmountFromMultiThreadsToIncreaseTheBalance() {
 
         // arrange
